@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Classic Leather",
+        "price": 120,
+        "image": "shoe1.jpg",
+        "description": "A timeless classic, perfect for any occasion."
+    },
+    {
+        "id": 2,
+        "name": "Running Pro",
+        "price": 150,
+        "image": "shoe2.jpg",
+        "description": "Experience ultimate comfort and performance with our Running Pro shoes."
+    },
+    {
+        "id": 3,
+        "name": "Urban Explorer",
+        "price": 135,
+        "image": "shoe3.jpg",
+        "description": "Conquer the city streets in style with the Urban Explorer."
+    },
+    {
+        "id": 4,
+        "name": "Casual Comfort",
+        "price": 95,
+        "image": "shoe4.jpg",
+        "description": "The perfect blend of style and comfort for your everyday adventures."
+    }
+]
