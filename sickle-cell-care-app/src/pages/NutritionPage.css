@@ -1,0 +1,62 @@
+.nutrition-page {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.nutrition-page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.nutrition-section {
+  margin-bottom: 2rem;
+}
+
+.nutrition-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 200px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.score-excellent {
+  color: green;
+  font-weight: bold;
+}
+
+.score-avoid {
+  color: red;
+  font-weight: bold;
+}
+
+.supplement-reminders {
+  margin-top: 2rem;
+}

@@ -12,6 +12,8 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/daily-management">Daily Management</Link></li>
         <li><Link to="/health-metrics">Health Metrics</Link></li>
+        <li><Link to="/nutrition">Nutrition</Link></li>
+        <li><Link to="/digital-clinic">Digital Clinic</Link></li>
       </ul>
     </nav>
   );
