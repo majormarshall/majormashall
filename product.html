@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ebm shoes - Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">ebm shoes</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-details-container">
+            <!-- Product details will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ebm shoes. All rights reserved.</p>
+        <p>Email: kalibest10@gmail.com | Phone: 07058124966</p>
+    </footer>
+
+    <script>
+        const productDetailsContainer = document.querySelector('.product-details-container');
+
+        async function loadProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            try {
+                const response = await fetch('products.json');
+                const products = await response.json();
+                const product = products.find(p => p.id == productId);
+
+                if (product) {
+                    productDetailsContainer.innerHTML = `
+                        <div class="product-details">
+                            <img src="${product.image}" alt="${product.name}">
+                            <div class="product-info">
+                                <h2>${product.name}</h2>
+                                <p class="price">$${product.price}</p>
+                                <p class="description">${product.description}</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    productDetailsContainer.innerHTML = '<p>Product not found.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading product details:', error);
+                productDetailsContainer.innerHTML = '<p>Error loading product details.</p>';
+            }
+        }
+
+        loadProductDetails();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
